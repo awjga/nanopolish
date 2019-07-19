@@ -132,6 +132,7 @@ raw_table fast5_get_raw_samples(hid_t hdf5_file, fast5_raw_scaling scaling)
     for (size_t i = 0; i < nsample; i++) {
         rawptr[i] = (rawptr[i] + scaling.offset) * raw_unit;
     }
+    tmp_nsample=nsample
 // filter the outliers in pA
     // this is edited by awjga
     for (size_t i = nsample-1; i >0 ; i--) {
